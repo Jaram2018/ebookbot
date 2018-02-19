@@ -47,7 +47,7 @@ def on_message(ws, message):
         return_msg = {
             'channel': message['channel'],
             'type': 'message',
-            'text': ebook_name.strip()
+            'text': ebook_name.strip() + ' -> ' + URL_TPL
         }
         ws.send(json.dumps(return_msg))
 
